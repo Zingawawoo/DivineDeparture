@@ -53,7 +53,7 @@ Use short-lived branches for focused changes:
 
 ## Contributing
 
-See `CONTRIBUTING.md` for the full workflow.
+See the full contribution workflow in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ### Basic workflow
 
@@ -123,10 +123,11 @@ Include:
 
 ## License
 
-(Insert your license here — MIT, proprietary, etc.)
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
 
 ---
 
 ## Credits
 
-Divine Departure is developed by the Game Dev Society and contributors.
+Divine Departure is developed by the Game Development and Design Society and contributors.
