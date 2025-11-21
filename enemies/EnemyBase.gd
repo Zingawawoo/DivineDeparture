@@ -9,6 +9,7 @@ class_name EnemyBase
 
 @export var knockback_decay: float = 2200.0
 @export var flash_duration: float = 0.1
+@export var telegraph_duration: float = 0.3
 
 @export var attack_damage: int = 1
 @export var attack_knockback: float = 160.0
@@ -26,6 +27,7 @@ var _is_attacking: bool = false
 
 @onready var Anim: AnimatedSprite2D = $Anim
 @onready var hurt_timer: Timer = $HurtTimer
+@onready var telegraph_timer: Timer = $TelegraphTimer
 
 func _ready() -> void:
 	_hp = max_hp
@@ -102,11 +104,13 @@ func _do_attack(direction: Vector2) -> void:
 		"direction": dir,
 		"source": self
 	}
-
+	_play_anim("attack")
+	telegraph_timer.start(telegraph_duration)
+	await telegraph_timer.timeout
 	if _player.has_method("apply_hit"):
 		_player.call("apply_hit", hit)
 
-	_play_anim("attack")
+	
 
 func apply_hit(hit: Dictionary) -> void:
 	var dmg_value: Variant = hit.get("damage", 1)
