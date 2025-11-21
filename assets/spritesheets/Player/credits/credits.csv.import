@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cpavkk1hasw6r"
+
+[deps]
+
+files=["res://assets/spritesheets/Player/credits/credits.notes.translation", "res://assets/spritesheets/Player/credits/credits.authors.translation", "res://assets/spritesheets/Player/credits/credits.licenses.translation", "res://assets/spritesheets/Player/credits/credits.urls.translation"]
+
+source_file="res://assets/spritesheets/Player/credits/credits.csv"
+dest_files=["res://assets/spritesheets/Player/credits/credits.notes.translation", "res://assets/spritesheets/Player/credits/credits.authors.translation", "res://assets/spritesheets/Player/credits/credits.licenses.translation", "res://assets/spritesheets/Player/credits/credits.urls.translation"]
+
+[params]
+
+compress=true
+delimiter=0

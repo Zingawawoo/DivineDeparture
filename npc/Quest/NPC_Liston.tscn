@@ -1,0 +1,100 @@
+[gd_scene load_steps=13 format=3 uid="uid://b22ujrdghtqa4"]
+
+[ext_resource type="PackedScene" uid="uid://1pq4oy2lbbr1" path="res://npc/NPC.tscn" id="1_6t7vs"]
+[ext_resource type="Texture2D" uid="uid://b5n74xeb3dymq" path="res://assets/spritesheets/Liston/Liston.png" id="2_dbttv"]
+[ext_resource type="Script" uid="uid://d0sojfgr8cj5n" path="res://npc/Quest/NPC_Liston.gd" id="2_g4127"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4127"]
+atlas = ExtResource("2_dbttv")
+region = Rect2(0, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1y03"]
+atlas = ExtResource("2_dbttv")
+region = Rect2(64, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oum8e"]
+atlas = ExtResource("2_dbttv")
+region = Rect2(128, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nryr6"]
+atlas = ExtResource("2_dbttv")
+region = Rect2(192, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sn54b"]
+atlas = ExtResource("2_dbttv")
+region = Rect2(256, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqw2a"]
+atlas = ExtResource("2_dbttv")
+region = Rect2(320, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyktl"]
+atlas = ExtResource("2_dbttv")
+region = Rect2(384, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buw5s"]
+atlas = ExtResource("2_dbttv")
+region = Rect2(448, 384, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yob1d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4127")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1y03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oum8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nryr6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sn54b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqw2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyktl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buw5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyktl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqw2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sn54b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nryr6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oum8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1y03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4127")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Npc" instance=ExtResource("1_6t7vs")]
+scale = Vector2(1.7, 1.7)
+script = ExtResource("2_g4127")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_yob1d")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.2424644

@@ -1,0 +1,81 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqjkcyn2d76mq"]
+
+[ext_resource type="FontFile" uid="uid://ds7ysefxxhhka" path="res://assets/fonts/game_over.ttf" id="1_62fiq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62fiq"]
+bg_color = Color(0, 0, 0, 0.8039216)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 0.7058824)
+
+[node name="DialogueBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelRoot" type="Control" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="PanelRoot"]
+custom_minimum_size = Vector2(0, 105)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 320.0
+offset_top = -238.0
+offset_right = -320.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_62fiq")
+
+[node name="NameLabel" type="Label" parent="PanelRoot/Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = 11.0
+offset_right = 224.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("1_62fiq")
+theme_override_font_sizes/font_size = 92
+
+[node name="TextLabel" type="Label" parent="PanelRoot/Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 62.0
+offset_right = -359.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.70380783, 0.70380783, 0.70380783, 1)
+theme_override_fonts/font = ExtResource("1_62fiq")
+theme_override_font_sizes/font_size = 72
+autowrap_mode = 2
+clip_text = true
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="PanelRoot/Panel"]
+texture_filter = 1
+layout_mode = 1
+offset_left = 950.0
+offset_top = 62.0
+offset_right = 1272.0
+offset_bottom = 192.0
+theme_override_constants/separation = 4

@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bv2m4vwylur1d"
+
+[deps]
+
+files=["res://assets/spritesheets/Thug/credits/credits.notes.translation", "res://assets/spritesheets/Thug/credits/credits.authors.translation", "res://assets/spritesheets/Thug/credits/credits.licenses.translation", "res://assets/spritesheets/Thug/credits/credits.urls.translation"]
+
+source_file="res://assets/spritesheets/Thug/credits/credits.csv"
+dest_files=["res://assets/spritesheets/Thug/credits/credits.notes.translation", "res://assets/spritesheets/Thug/credits/credits.authors.translation", "res://assets/spritesheets/Thug/credits/credits.licenses.translation", "res://assets/spritesheets/Thug/credits/credits.urls.translation"]
+
+[params]
+
+compress=true
+delimiter=0

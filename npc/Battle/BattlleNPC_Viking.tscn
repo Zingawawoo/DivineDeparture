@@ -1,0 +1,70 @@
+[gd_scene load_steps=12 format=3 uid="uid://7o73t4c43gjc"]
+
+[ext_resource type="PackedScene" uid="uid://1pq4oy2lbbr1" path="res://npc/NPC.tscn" id="1_qmrsx"]
+[ext_resource type="Script" uid="uid://dvs55lhkoq6xx" path="res://npc/Battle/BattleNPC_Viking.gd" id="2_e0bkd"]
+[ext_resource type="Texture2D" uid="uid://cb14g0noumhbd" path="res://assets/spritesheets/Viking/Viking.png" id="2_j223b"]
+[ext_resource type="PackedScene" uid="uid://bj5e4dsn8cje7" path="res://enemies/EnemyViking.tscn" id="3_f3qx3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0bkd"]
+atlas = ExtResource("2_j223b")
+region = Rect2(0, 896, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3qx3"]
+atlas = ExtResource("2_j223b")
+region = Rect2(64, 896, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lafad"]
+atlas = ExtResource("2_j223b")
+region = Rect2(128, 896, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hex7q"]
+atlas = ExtResource("2_j223b")
+region = Rect2(192, 896, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8kqd"]
+atlas = ExtResource("2_j223b")
+region = Rect2(256, 896, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upmy2"]
+atlas = ExtResource("2_j223b")
+region = Rect2(320, 896, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rabtl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0bkd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3qx3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lafad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hex7q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8kqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upmy2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[node name="Npc" instance=ExtResource("1_qmrsx")]
+scale = Vector2(1.7, 1.7)
+script = ExtResource("2_e0bkd")
+battle_scene_path = "res://levels/Farm_Arena.tscn"
+battle_enemy_scene = ExtResource("3_f3qx3")
+quest_to_complete = 1
+quest_to_start_next = -1
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_rabtl")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.24092323

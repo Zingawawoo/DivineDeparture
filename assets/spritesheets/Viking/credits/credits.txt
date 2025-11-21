@@ -1,0 +1,213 @@
+body/bodies/female/olive.png
+	- Note: see details at https://opengameart.org/content/lpc-character-bases
+	- Licenses:
+		- OGA-BY 3.0
+		- CC-BY-SA 3.0
+		- GPL 3.0
+	- Authors:
+		- Benjamin K. Smith (BenCreating)
+		- bluecarrot16
+		- TheraHedwig
+		- Evert
+		- MuffinElZangano
+		- Durrani
+		- Pierre Vigier (pvigier)
+		- ElizaWy
+		- Matthew Krohn (makrohn)
+		- Johannes Sjölund (wulax)
+		- Stephen Challener (Redshrike)
+	- Links:
+		- https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+		- https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+		- https://opengameart.org/content/lpc-ladies
+		- https://opengameart.org/content/lpc-7-womens-shirts
+		- https://opengameart.org/content/lpc-jump-expanded
+		- https://opengameart.org/content/lpc-be-seated
+		- https://opengameart.org/content/lpc-revised-character-basics
+		- https://gitlab.com/vagabondgame/lpc-characters
+		- https://opengameart.org/content/lpc-male-jumping-animation-by-durrani
+		- https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle
+
+body/wound/brain.png
+	- Note: 
+	- Licenses:
+		- CC-BY-SA 3.0
+		- GPL 3.0
+	- Authors:
+		- Benjamin K. Smith (BenCreating)
+		- Sander Frenken (castelonia)
+	- Links:
+		- https://opengameart.org/content/lpc-zombie
+
+head/heads/human/male/olive.png
+	- Note: original head by Redshrike, tweaks by BenCreating, modular version by bluecarrot16
+	- Licenses:
+		- OGA-BY 3.0
+		- CC-BY-SA 3.0
+		- GPL 3.0
+	- Authors:
+		- bluecarrot16
+		- Benjamin K. Smith (BenCreating)
+		- Stephen Challener (Redshrike)
+	- Links:
+		- https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+		- https://opengameart.org/content/lpc-character-bases
+
+hair/cornrows/adult/dark_brown.png
+	- Note: Original by bluecarrot16, animated by ElizaWy.
+	- Licenses:
+		- CC0
+	- Authors:
+		- ElizaWy
+		- bluecarrot16
+	- Links:
+		- https://opengameart.org/content/lpc-hair
+		- https://github.com/ElizaWy/LPC/blob/main/Characters/Hair
+		- https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hat/accessory/horns_upward/fg/adult/brown.png
+	- Note: 
+	- Licenses:
+		- OGA-BY 3.0
+	- Authors:
+		- bluecarrot16
+	- Links:
+		- https://opengameart.org/content/lpc-helmets
+		- https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/accessory/horns_upward/bg/adult/brown.png
+	- Note: 
+	- Licenses:
+		- OGA-BY 3.0
+	- Authors:
+		- bluecarrot16
+	- Links:
+		- https://opengameart.org/content/lpc-helmets
+		- https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+shoulders/leather/female/navy.png
+	- Note: adapted to female base by makrohn, adapted to v3 bases by bluecarrot16
+	- Licenses:
+		- OGA-BY 3.0
+		- CC-BY-SA 3.0
+		- GPL 3.0
+	- Authors:
+		- Matthew Krohn (makrohn)
+		- Johannes Sjölund (wulax)
+	- Links:
+		- https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+		- http://opengameart.org/content/lpc-clothing-updates
+
+arms/armour/plate/female/iron.png
+	- Note: original by wulax, adapted to female by makrohn, recolors by bigbeargames; adapted to v3 bases and further recolors by bluecarrot16
+	- Licenses:
+		- OGA-BY 3.0
+		- CC-BY-SA 3.0
+		- GPL 3.0
+	- Authors:
+		- Michael Whitlock (bigbeargames)
+		- Matthew Krohn (makrohn)
+		- Johannes Sjölund (wulax)
+	- Links:
+		- https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+		- https://opengameart.org/content/lpc-combat-armor-for-women
+		- http://opengameart.org/content/lpc-clothing-updates
+
+bauldron/female/brown.png
+	- Note: 
+	- Licenses:
+		- GPL 2.0
+		- GPL 3.0
+		- OGA-BY 3.0
+		- CC-BY-SA 3.0
+	- Authors:
+		- Nila122
+	- Links:
+		- https://opengameart.org/content/more-lpc-clothes-and-hair
+
+torso/bandage/female/white.png
+	- Note: 
+	- Licenses:
+		- OGA-BY 3.0
+		- CC-BY-SA 3.0
+		- GPL 2.0
+		- GPL 3.0
+	- Authors:
+		- Nila122
+	- Links:
+		- https://opengameart.org/content/lpc-bandages
+
+torso/chainmail/female/gray.png
+	- Note: minor edits by bluecarrot16
+	- Licenses:
+		- OGA-BY 3.0
+		- CC-BY-SA 3.0
+		- GPL 3.0
+	- Authors:
+		- Johannes Sjölund (wulax)
+	- Links:
+		- https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+
+legs/armour/plate/thin/copper.png
+	- Note: reduced to 7 colors an adapted to v3 bases by bluecarrot16, climb/jump/sit/emotes by JaidynReiman
+	- Licenses:
+		- OGA-BY 3.0
+		- CC-BY-SA 3.0
+		- GPL 3.0
+	- Authors:
+		- bluecarrot16
+		- JaidynReiman
+		- Michael Whitlock (bigbeargames)
+		- Matthew Krohn (makrohn)
+		- Johannes Sjölund (wulax)
+	- Links:
+		- https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+
+feet/armour/plate/female/copper.png
+	- Note: original by wulax, edited for female base by makrohn, recolors by bigbeargames, edits for v3 base and recolors by bluecarrot16
+	- Licenses:
+		- OGA-BY 3.0
+		- CC-BY-SA 3.0
+		- GPL 3.0
+	- Authors:
+		- Matthew Krohn (makrohn)
+		- Johannes Sjölund (wulax)
+	- Links:
+		- https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+
+weapon/sword/katana/walk/katana.png
+	- Note: 
+	- Licenses:
+		- OGA-BY 3.0
+	- Authors:
+		- Pierre Vigier and DCSS artists (see https://github.com/crawl/tiles/blob/master/ARTISTS.md)
+	- Links:
+		- https://opengameart.org/content/lpc-dcss-swords
+
+weapon/sword/katana/walk/behind/katana.png
+	- Note: 
+	- Licenses:
+		- OGA-BY 3.0
+	- Authors:
+		- Pierre Vigier and DCSS artists (see https://github.com/crawl/tiles/blob/master/ARTISTS.md)
+	- Links:
+		- https://opengameart.org/content/lpc-dcss-swords
+
+weapon/sword/katana/slash/katana.png
+	- Note: 
+	- Licenses:
+		- OGA-BY 3.0
+	- Authors:
+		- Pierre Vigier and DCSS artists (see https://github.com/crawl/tiles/blob/master/ARTISTS.md)
+	- Links:
+		- https://opengameart.org/content/lpc-dcss-swords
+
+weapon/sword/katana/slash/behind/katana.png
+	- Note: 
+	- Licenses:
+		- OGA-BY 3.0
+	- Authors:
+		- Pierre Vigier and DCSS artists (see https://github.com/crawl/tiles/blob/master/ARTISTS.md)
+	- Links:
+		- https://opengameart.org/content/lpc-dcss-swords
+

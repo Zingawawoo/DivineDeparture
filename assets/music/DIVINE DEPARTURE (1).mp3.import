@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://x25ekwpmdxn2"
+path="res://.godot/imported/DIVINE DEPARTURE (1).mp3-d7861d1e7e672a30094a67c53c1fd4aa.mp3str"
+
+[deps]
+
+source_file="res://assets/music/DIVINE DEPARTURE (1).mp3"
+dest_files=["res://.godot/imported/DIVINE DEPARTURE (1).mp3-d7861d1e7e672a30094a67c53c1fd4aa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

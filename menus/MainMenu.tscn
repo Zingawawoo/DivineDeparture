@@ -1,0 +1,132 @@
+[gd_scene load_steps=11 format=3 uid="uid://bkbal34mifg4n"]
+
+[ext_resource type="Script" uid="uid://biba0l6eurxpt" path="res://menus/MainMenu.gd" id="1_ciyvu"]
+[ext_resource type="PackedScene" uid="uid://ngbgel0o6fat" path="res://scenes/Main.tscn" id="2_7fxis"]
+[ext_resource type="FontFile" uid="uid://ds7ysefxxhhka" path="res://assets/fonts/game_over.ttf" id="2_ot3ob"]
+[ext_resource type="Texture2D" uid="uid://ibh6rypuba14" path="res://assets/menu/Divine Menu1.png" id="4_7fxis"]
+[ext_resource type="Texture2D" uid="uid://caron2fy87msp" path="res://assets/menu/Divine Menu2.png" id="4_k15nl"]
+[ext_resource type="Texture2D" uid="uid://c4if0sjxy1etc" path="res://assets/menu/Divine Menu3.png" id="5_k15nl"]
+[ext_resource type="AudioStream" uid="uid://x25ekwpmdxn2" path="res://assets/music/DIVINE DEPARTURE (1).mp3" id="6_e2awe"]
+[ext_resource type="StyleBox" uid="uid://c3e0fwcf6rw2e" path="res://ui/Button.stylebox" id="7_k15nl"]
+[ext_resource type="AudioStream" uid="uid://bug6wdoow5p5c" path="res://assets/sfx/SwordMenu.mp3" id="7_lb38e"]
+[ext_resource type="StyleBox" uid="uid://c8tt2fy2cidc5" path="res://ui/hover.tres" id="8_4yyw3"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ciyvu")
+main_scene = ExtResource("2_7fxis")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TitleContainer" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleLayer1" type="TextureRect" parent="TitleContainer"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_7fxis")
+
+[node name="TitleLayer2" type="TextureRect" parent="TitleContainer"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_k15nl")
+
+[node name="TitleLayer3" type="TextureRect" parent="TitleContainer"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_k15nl")
+
+[node name="ButtonContainer" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -417.5
+offset_top = -480.0
+offset_right = 417.5
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 40
+
+[node name="NewGameButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_ot3ob")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = ExtResource("7_k15nl")
+theme_override_styles/pressed = ExtResource("8_4yyw3")
+theme_override_styles/hover = ExtResource("8_4yyw3")
+theme_override_styles/disabled = ExtResource("8_4yyw3")
+theme_override_styles/focus = ExtResource("8_4yyw3")
+action_mode = 0
+text = "NEW  GAME"
+
+[node name="ContinueButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_ot3ob")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = ExtResource("7_k15nl")
+theme_override_styles/pressed = ExtResource("8_4yyw3")
+theme_override_styles/hover = ExtResource("8_4yyw3")
+theme_override_styles/disabled = ExtResource("8_4yyw3")
+theme_override_styles/focus = ExtResource("8_4yyw3")
+action_mode = 0
+text = "CONTINUE
+"
+
+[node name="QuitButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_ot3ob")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = ExtResource("7_k15nl")
+theme_override_styles/pressed = ExtResource("8_4yyw3")
+theme_override_styles/hover = ExtResource("8_4yyw3")
+theme_override_styles/disabled = ExtResource("8_4yyw3")
+theme_override_styles/focus = ExtResource("8_4yyw3")
+action_mode = 0
+text = "QUIT  TO  DESKTOP"
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_e2awe")
+volume_db = -20.0
+
+[node name="SfxPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_lb38e")
+volume_db = -5.0
+
+[node name="FadeRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.003921569)

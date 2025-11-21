@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bhqjhqov3bbsf"]
+
+[ext_resource type="Texture2D" uid="uid://bhe0u6saoe8g1" path="res://assets/tilesets/Pixel Crawler - Free Pack/Environment/Static/Gravestones.png" id="1_0w5h2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0v8i8"]
+texture = ExtResource("1_0w5h2")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_0v8i8")

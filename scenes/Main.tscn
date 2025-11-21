@@ -1,0 +1,83 @@
+[gd_scene load_steps=3 format=3 uid="uid://ngbgel0o6fat"]
+
+[ext_resource type="Script" uid="uid://b3m210xsgw8ph" path="res://scenes/Main.gd" id="1_rvslj"]
+
+[sub_resource type="GDScript" id="GDScript_rvslj"]
+script/source = "extends Camera2D
+
+@export var target: Node2D                       # set to your Player
+@export var deadzone_size: Vector2 = Vector2(480, 270)  # width/height in px (centered on camera)
+@export var smoothing_speed: float = 6.0         # higher = snappier follow
+
+# Optional world limits (in pixels). Leave as null to disable clamping.
+@export var use_limits: bool = false
+@export var limit_rect: Rect2 = Rect2(Vector2.ZERO, Vector2(3840, 2160))
+
+var _target_pos: Vector2 = Vector2.ZERO
+
+func _ready() -> void:
+	if target == null:
+		push_warning(\"Camera2D: Target is not assigned.\")
+
+func _process(delta: float) -> void:
+	if target == null:
+		return
+
+	# 1) Read positions
+	var cam_pos: Vector2 = global_position
+	var player_pos: Vector2 = target.global_position
+
+	# 2) Compute camera's deadzone rectangle (centered on camera)
+	var half: Vector2 = deadzone_size * 0.5
+	var dz_left: float = cam_pos.x - half.x
+	var dz_right: float = cam_pos.x + half.x
+	var dz_top: float = cam_pos.y - half.y
+	var dz_bottom: float = cam_pos.y + half.y
+
+	# 3) If player is outside, shift the camera target so the player sits on the edge
+	_target_pos = cam_pos  # start from current camera position
+
+	# Horizontal
+	if player_pos.x < dz_left:
+		_target_pos.x = player_pos.x + half.x
+	elif player_pos.x > dz_right:
+		_target_pos.x = player_pos.x - half.x
+
+	# Vertical
+	if player_pos.y < dz_top:
+		_target_pos.y = player_pos.y + half.y
+	elif player_pos.y > dz_bottom:
+		_target_pos.y = player_pos.y - half.y
+
+	# 4) Optional world clamping (keep the whole deadzone on-screen)
+	if use_limits:
+		var min_x: float = limit_rect.position.x + half.x
+		var max_x: float = limit_rect.position.x + limit_rect.size.x - half.x
+		var min_y: float = limit_rect.position.y + half.y
+		var max_y: float = limit_rect.position.y + limit_rect.size.y - half.y
+
+		if _target_pos.x < min_x:
+			_target_pos.x = min_x
+		if _target_pos.x > max_x:
+			_target_pos.x = max_x
+		if _target_pos.y < min_y:
+			_target_pos.y = min_y
+		if _target_pos.y > max_y:
+			_target_pos.y = max_y
+
+	# 5) Smoothly approach the target
+	var t: float = 1.0 - pow(2.0, -smoothing_speed * delta)  # framerate-independent smoothing
+	global_position = global_position.round()
+	global_position = global_position.lerp(_target_pos, t)
+"
+
+[node name="Main" type="Node"]
+script = ExtResource("1_rvslj")
+
+[node name="CurrentArea" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+script = SubResource("GDScript_rvslj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

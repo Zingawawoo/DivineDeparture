@@ -1,0 +1,29 @@
+# Godot 4+ specific
+.godot/
+
+# Godot import cache (auto-generated)
+.import/
+
+# Export settings
+export.cfg
+export_presets.cfg
+export_credentials.cfg
+
+# Imported translations (auto-generated)
+*.translation
+
+# Mono / C# (if you’re not using it, this is harmless)
+.mono/
+data_*/
+mono_crash.*.json
+
+# OS crap
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor backups
+*~
+*.tmp

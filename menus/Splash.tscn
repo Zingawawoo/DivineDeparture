@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=3 uid="uid://dc6g6tgu20vxy"]
+
+[ext_resource type="Script" uid="uid://ihov8v5xv6ri" path="res://menus/splash.gd" id="1_58lqe"]
+[ext_resource type="Texture2D" uid="uid://cdgk84m1c62t8" path="res://assets/menu/logo_vertical_color_light.png" id="1_y4yub"]
+[ext_resource type="Texture2D" uid="uid://c1kgq78fp3owf" path="res://assets/menu/bristolgdd_logo_white.png" id="3_l11og"]
+[ext_resource type="FontFile" uid="uid://c448agthr4k0y" path="res://assets/fonts/upheavtt.ttf" id="4_ggsfp"]
+
+[node name="Splash" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_58lqe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer"]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_y4yub")
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer2"]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_l11og")
+
+[node name="CenterContainer3" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Credits" type="Label" parent="CenterContainer3"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_ggsfp")
+theme_override_font_sizes/font_size = 72
+text = "Made By 
+
+Aziz
+Aditya
+Amaan"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer4" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Credits" type="Label" parent="CenterContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_ggsfp")
+theme_override_font_sizes/font_size = 72
+text = "Third PARTY CREDITS
+
+UNIVERSAL LPC SPRITE GENERATOR
+PIXEL CRAWLER PACK BY ANOKOLISA
+SWORD SPRITE BY Mykel AD
+
+Alkhemikal by jeti
+Karmatic Arcade by Vic Fieger
+Game Over by Pedro M. Pastor
+Upheaval by Ænigma
+"
+horizontal_alignment = 1
+vertical_alignment = 1

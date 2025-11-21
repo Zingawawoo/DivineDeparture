@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbtkidqmav6e7"]
+
+[ext_resource type="PackedScene" uid="uid://1pq4oy2lbbr1" path="res://npc/NPC.tscn" id="1_ylb0v"]
+[ext_resource type="Script" uid="uid://c31dovks4fgqv" path="res://npc/Quest/NPC_Dad.gd" id="2_v487t"]
+[ext_resource type="Texture2D" uid="uid://ms0qn12srchy" path="res://assets/spritesheets/Dad/standard/idle.png" id="3_v487t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyo31"]
+atlas = ExtResource("3_v487t")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pplg"]
+atlas = ExtResource("3_v487t")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x01dq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyo31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pplg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Npc" groups=["dad_tutorial"] instance=ExtResource("1_ylb0v")]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("2_v487t")
+npc_name = "Dad"
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_x01dq")
+frame_progress = 0.83581376

@@ -1,0 +1,205 @@
+[gd_scene load_steps=20 format=3 uid="uid://b6wgtkqkybywl"]
+
+[ext_resource type="Texture2D" uid="uid://5mckvsj2xrli" path="res://assets/tilesets/coins-chests-etc-2-0-noborders.png" id="1_1x8ju"]
+[ext_resource type="Script" uid="uid://ccl15lf3sai25" path="res://ui/Hud.gd" id="1_aaqae"]
+[ext_resource type="PackedScene" uid="uid://dqjkcyn2d76mq" path="res://ui/DialogueBox.tscn" id="3_jd13s"]
+[ext_resource type="FontFile" uid="uid://c448agthr4k0y" path="res://assets/fonts/upheavtt.ttf" id="3_wxbmk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aaqae"]
+atlas = ExtResource("1_1x8ju")
+region = Rect2(400, 192, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jd13s"]
+atlas = ExtResource("1_1x8ju")
+region = Rect2(416, 192, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxbmk"]
+atlas = ExtResource("1_1x8ju")
+region = Rect2(432, 192, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pom5v"]
+atlas = ExtResource("1_1x8ju")
+region = Rect2(448, 192, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfnlp"]
+atlas = ExtResource("1_1x8ju")
+region = Rect2(464, 192, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3q2by"]
+atlas = ExtResource("1_1x8ju")
+region = Rect2(480, 192, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ipw0"]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"Empty",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aaqae")
+}],
+"loop": false,
+"name": &"Full",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aaqae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jd13s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxbmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pom5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfnlp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3q2by")
+}],
+"loop": false,
+"name": &"Refresh",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x8ju"]
+atlas = ExtResource("1_1x8ju")
+region = Rect2(176, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvtyy"]
+atlas = ExtResource("1_1x8ju")
+region = Rect2(192, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_li43i"]
+atlas = ExtResource("1_1x8ju")
+region = Rect2(208, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a33y5"]
+atlas = ExtResource("1_1x8ju")
+region = Rect2(224, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37bek"]
+atlas = ExtResource("1_1x8ju")
+region = Rect2(240, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28i83"]
+atlas = ExtResource("1_1x8ju")
+region = Rect2(256, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qnlx"]
+atlas = ExtResource("1_1x8ju")
+region = Rect2(272, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qrs8l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x8ju")
+}],
+"loop": false,
+"name": &"default",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x8ju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvtyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_li43i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a33y5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37bek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28i83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qnlx")
+}],
+"loop": false,
+"name": &"refresh",
+"speed": 11.0
+}]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_aaqae")
+heart_frames = SubResource("SpriteFrames_7ipw0")
+
+[node name="Hearts" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+
+[node name="HeartsContainer" type="HBoxContainer" parent="Hearts"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HeartTemplate" type="AnimatedSprite2D" parent="Hearts"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_7ipw0")
+animation = &"Refresh"
+frame = 5
+frame_progress = 1.0
+
+[node name="Currency" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1936.0
+offset_top = -16.0
+offset_right = -1896.0
+offset_bottom = 24.0
+grow_horizontal = 0
+
+[node name="CurrencyIcon" type="AnimatedSprite2D" parent="Currency"]
+sprite_frames = SubResource("SpriteFrames_qrs8l")
+
+[node name="AmountLabel" type="Label" parent="Currency"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PromptLabel" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 920.0
+offset_top = 1017.0
+offset_right = 960.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_wxbmk")
+
+[node name="FadeRect" type="ColorRect" parent="."]
+z_index = 100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="DialogueBox" parent="." instance=ExtResource("3_jd13s")]
+visible = false

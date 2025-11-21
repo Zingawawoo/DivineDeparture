@@ -1,0 +1,13 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://eu7i346gsvgp"]
+
+[ext_resource type="Texture2D" uid="uid://dgoya2q2gcwek" path="res://assets/tilesets/Pixel Crawler - Free Pack/collision.png" id="1_rwkee"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u100v"]
+texture = ExtResource("1_rwkee")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_u100v")
