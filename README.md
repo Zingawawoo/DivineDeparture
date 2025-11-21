@@ -1,8 +1,13 @@
 # Divine Departure
 
+[![GDD Society](https://img.shields.io/badge/UoB%20GDD%20Society-8E24AA?style=for-the-badge&logo=github)](https://github.com/Zingawawoo/GDD-Repo)
+
 Divine Departure is a 2D isometric sword-fighting RPG built in **Godot 4**.
 
 This repo is set up for team development with a protected `main` branch and a collaborative `dev` branch.
+
+> Part of the **University of Bristol Game Development & Design Society**  
+> 🔗 https://github.com/Zingawawoo/GDD-Repo  
 
 ---
 
@@ -118,6 +123,18 @@ Include:
 - Short description
 - Gameplay impact
 - Optional references or mockups
+
+---
+
+## 🏛️ Part of the Game Development & Design Society
+
+This project is developed as part of the  
+**University of Bristol Game Development & Design Society (GDD).**
+
+- 🌐 Society Hub Repo: https://github.com/Zingawawoo/GDD-Repo  
+- 📚 Workshops, resources, and documentation  
+- 🎮 Other student-led game projects  
+
 
 ---
 
